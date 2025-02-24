@@ -15,10 +15,10 @@ export default function Hero({ title, description, backgroundUrl }: HeroProps) {
           backgroundPosition: 'center',
         }}
       />
-      
-      <div className="container-wide relative py-24 md:py-32">
-        <h1 className="max-w-[900px]">{title}</h1>
-        <p className="mt-6 text-xl md:text-2xl max-w-[750px] text-gray-300">
+
+      <div className="container-wide relative py-24 md:py-32 text-center">
+        <h1 className="max-w-[900px] mx-auto">{title}</h1>
+        <p className="mt-6 text-xl md:text-2xl max-w-[750px] text-gray-300 mx-auto">
           {description}
         </p>
       </div>

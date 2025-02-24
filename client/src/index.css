@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,7 +15,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Merriweather', serif;
   }
 
   h1 {
@@ -43,6 +43,6 @@
   }
 
   .full-width-image {
-    @apply -mx-4 md:-mx-0 w-[100vw] md:w-full max-w-[1300px] relative left-1/2 -translate-x-1/2;
+    @apply -mx-4 md:-mx-8 lg:-mx-16 w-[100vw] md:w-[calc(100vw-2rem)] lg:w-[calc(100vw-4rem)] max-w-[1600px] relative left-1/2 -translate-x-1/2;
   }
 }
