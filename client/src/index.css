@@ -35,7 +35,7 @@
   }
 
   .container-wide {
-    @apply max-w-[1300px] mx-auto px-4;
+    @apply max-w-[1280px] mx-auto px-4;
   }
 
   .image-caption {
@@ -43,6 +43,6 @@
   }
 
   .full-width-image {
-    @apply -mx-4 md:-mx-8 lg:-mx-16 w-[100vw] md:w-[calc(100vw-2rem)] lg:w-[calc(100vw-4rem)] max-w-[1600px] relative left-1/2 -translate-x-1/2;
+    @apply -mx-4 md:-mx-8 lg:-mx-16 w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] lg:w-[calc(100%+8rem)] relative left-1/2 -translate-x-1/2;
   }
 }
