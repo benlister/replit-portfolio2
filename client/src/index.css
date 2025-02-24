@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +11,11 @@
 
   body {
     @apply font-sans antialiased bg-[#FAFAFA] text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
   }
 
   h1 {
@@ -33,5 +40,9 @@
 
   .image-caption {
     @apply text-sm text-muted-foreground mt-2 italic;
+  }
+
+  .full-width-image {
+    @apply -mx-4 md:-mx-0 w-[100vw] md:w-full max-w-[1300px] relative left-1/2 -translate-x-1/2;
   }
 }

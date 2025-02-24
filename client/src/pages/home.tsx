@@ -2,6 +2,7 @@ import Hero from "@/components/sections/hero";
 import CaseStudy from "@/components/sections/case-study";
 import Metadata from "@/components/sections/metadata";
 import ImageGrid from "@/components/ui/image-grid";
+import MetricsGrid from "@/components/sections/metrics-grid";
 
 export default function Home() {
   const portfolioImages = [
@@ -19,18 +20,18 @@ export default function Home() {
     }
   ];
 
-  const detailImages = [
+  const metrics = [
     {
-      url: "https://images.unsplash.com/photo-1520806004693-db86ec088635",
-      caption: "User Interface Components"
+      value: "40%",
+      label: "Reduction in Design Iteration Time"
     },
     {
-      url: "https://images.unsplash.com/photo-1518683999933-22cd5c651d5e",
-      caption: "Design Documentation"
+      value: "65%",
+      label: "Improvement in Design Consistency"
     },
     {
-      url: "https://images.unsplash.com/photo-1520321930038-85a3e4ceb446",
-      caption: "Interactive Prototypes"
+      value: "3x",
+      label: "Increase in Team Collaboration"
     }
   ];
 
@@ -41,7 +42,7 @@ export default function Home() {
         description="A comprehensive case study on revolutionizing design workflows and collaboration"
         backgroundUrl="https://images.unsplash.com/photo-1455849318743-b2233052fcff"
       />
-      
+
       <div className="container-wide py-16">
         <div className="grid md:grid-cols-[300px,1fr] gap-12">
           <Metadata
@@ -49,7 +50,7 @@ export default function Home() {
             role="Staff Product Designer"
             activities={["Strategy", "Code", "Visual Design", "Content"]}
           />
-          
+
           <div className="space-y-16">
             <CaseStudy
               title="Context"
@@ -58,24 +59,66 @@ export default function Home() {
 
             <section>
               <h2 className="mb-8">Projects</h2>
-              <ImageGrid images={portfolioImages} />
+
+              <div className="full-width-image aspect-[21/9] overflow-hidden mb-12">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+                  alt="Design System Overview"
+                  className="w-full h-full object-cover"
+                />
+                <p className="image-caption text-center mt-4">
+                  Complete overview of the design system components and documentation
+                </p>
+              </div>
+
               <div className="prose mt-8">
                 <p>
                   Our approach focused on creating scalable design systems and workflows that could adapt to the organization's growing needs while maintaining design quality and consistency.
                 </p>
               </div>
-              <ImageGrid images={detailImages} className="mt-12" />
+
+              <ImageGrid images={portfolioImages} className="mt-12" />
+
+              <div className="full-width-image aspect-video overflow-hidden mt-12">
+                <img
+                  src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d"
+                  alt="Team Collaboration"
+                  className="w-full h-full object-cover"
+                />
+                <p className="image-caption text-center mt-4">
+                  Cross-functional team workshops and collaborative design sessions
+                </p>
+              </div>
             </section>
 
             <CaseStudy
               title="Challenges"
-              content="The primary challenge was balancing the need for creative freedom with the requirements for consistency and scalability. We needed to create systems that would empower designers while ensuring cohesive output across teams."
+              content="The primary challenge was balancing the need for creative freedom with the requirements for consistency and scalability. We encountered several key obstacles:"
             />
+            <div className="prose">
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Maintaining design consistency across multiple teams and products</li>
+                <li>Scaling design operations without compromising quality</li>
+                <li>Integrating new tools and processes without disrupting existing workflows</li>
+                <li>Training and onboarding team members efficiently</li>
+              </ul>
+            </div>
 
-            <CaseStudy
-              title="Outcomes"
-              content="The implementation of our new design system and workflow tools resulted in a 40% reduction in design iteration time and a significant improvement in cross-team collaboration. Design consistency scores improved by 65% across all product areas."
-            />
+            <section>
+              <h2 className="mb-6">Outcomes</h2>
+              <MetricsGrid metrics={metrics} />
+              <div className="prose">
+                <p>
+                  The implementation of our new design system and workflow tools resulted in significant improvements across all key metrics. Beyond the numbers, we observed:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mt-4">
+                  <li>Enhanced team collaboration and communication</li>
+                  <li>Streamlined design review and approval processes</li>
+                  <li>Improved documentation and knowledge sharing</li>
+                  <li>Greater design system adoption across teams</li>
+                </ul>
+              </div>
+            </section>
           </div>
         </div>
       </div>
